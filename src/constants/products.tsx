@@ -51,9 +51,9 @@ export const products = [
           <strong>Solution:</strong> I utilized React Router in combination with
           Firebase Authentication. I created a <code>PrivateRoute</code> component
           that checks if a user is authenticated before granting access to
-          protected routes. Additionally, I implemented React's Context API to
+          protected routes. Additionally, I implemented React&apos;s Context API to
           manage and provide the authentication state throughout the application.
-          By leveraging Firebase's built-in methods for authentication state
+          By leveraging Firebase&apos;s built-in methods for authentication state
           persistence, user sessions could be maintained seamlessly, enhancing
           both security and user experience.
         </p>
@@ -68,12 +68,12 @@ export const products = [
           users were significant challenges.
         </p>
         <p>
-          <strong>Solution:</strong> I leveraged Firebase Firestore's real-time
+          <strong>Solution:</strong> I leveraged Firebase Firestore&apos;s real-time
           capabilities by setting up listeners that monitor changes in the{" "}
           <em>bookings</em> collection. This allowed the application to update the
           availability status of cars instantaneously as bookings were made or
           modified. To handle concurrent bookings and prevent race conditions, I
-          utilized Firestore's transaction feature, ensuring booking operations
+          utilized Firestore&apos;s transaction feature, ensuring booking operations
           were atomic. Additionally, I implemented optimistic UI updates to
           provide immediate feedback, making the application more responsive and
           user-friendly.
@@ -199,7 +199,7 @@ export const products = [
         {/* Introduction / Description */}
         <p>
           <strong>Pet</strong> is a simple yet engaging platform that showcases 
-          information about pets and related content. Whether you're a seasoned 
+          information about pets and related content. Whether you are a seasoned 
           animal lover or just starting to explore the pet world, this platform 
           helps you discover interesting insights and fun facts. It blends 
           minimalistic design with core web technologies—HTML, CSS3, and 

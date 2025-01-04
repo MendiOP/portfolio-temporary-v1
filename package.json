@@ -11,6 +11,7 @@
   "dependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
     "@mdx-js/loader": "^2.3.0",
+    "@netlify/plugin-nextjs": "^5.9.2",
     "@next/mdx": "^13.4.19",
     "@tabler/icons-react": "^2.32.0",
     "@tailwindcss/typography": "^0.5.9",
