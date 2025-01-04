@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="shortcut icon" href="/public/fav.webp" type="image/x-icon" />
+        <link rel="shortcut icon" href="/fav.webp" type="image/x-icon" />
       </head>
       <body
         className={twMerge(
