@@ -22,8 +22,8 @@ export const socials = [
     icon: IconBrandFacebook,
   },
   {
-    href: "mehedihm2015@gmail.com",
+    href: "mailto:mehedihm2015@gmail.com",
     label: "Gmail",
     icon: IconBrandGmail,
-  },
+  }  
 ];
