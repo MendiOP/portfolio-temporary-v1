@@ -6,7 +6,7 @@ import {
 
 export const socials = [
   {
-    href: "https://www.linkedin.com/in/mehedi-hasan-b9ba511a4/",
+    href: "https://www.linkedin.com/in/mehedi-hasan035/",
     label: "LinkedIn",
     icon: IconBrandLinkedin,
   },
