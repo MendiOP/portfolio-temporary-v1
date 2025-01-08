@@ -21,7 +21,17 @@ export const Contact = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     // will write later
-    console.log(formData);
+    const {
+      name: { value: nameValue },
+      email: { value: emailValue },
+      message: { value: messageValue },
+    } = formData;
+
+    console.log(nameValue, emailValue, messageValue);
+
+    setFormData(defaultFormState);
+
+    
   };
   return (
     <form className="form" onSubmit={handleSubmit}>
@@ -29,6 +39,7 @@ export const Contact = () => {
         <input
           type="text"
           placeholder="Your Name"
+          required
           className="bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-200 px-2 py-2 rounded-md text-sm text-neutral-700 w-full"
           value={formData.name.value}
           onChange={(e) => {
@@ -44,6 +55,7 @@ export const Contact = () => {
         <input
           type="email"
           placeholder="Your email address"
+          required
           className="bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-200 px-2 py-2 rounded-md text-sm text-neutral-700 w-full"
           value={formData.email.value}
           onChange={(e) => {
@@ -60,6 +72,7 @@ export const Contact = () => {
       <div>
         <textarea
           placeholder="Your Message"
+          required
           rows={10}
           className="bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-200 px-2 mt-4 py-2 rounded-md text-sm text-neutral-700 w-full"
           value={formData.message.value}
