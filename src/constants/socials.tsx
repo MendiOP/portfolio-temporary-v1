@@ -3,6 +3,7 @@ import {
   IconBrandGithub,
   IconBrandGmail,
   IconBrandLinkedin,
+  IconBrandWhatsapp
 } from "@tabler/icons-react";
 
 export const socials = [
@@ -25,5 +26,10 @@ export const socials = [
     href: "mailto:mehedihm2015@gmail.com",
     label: "Gmail",
     icon: IconBrandGmail,
-  }  
+  },
+  {
+    href: "https://wa.me/1234567890",
+    label: "WhatsApp",
+    icon: IconBrandWhatsapp,
+  }
 ];
