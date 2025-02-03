@@ -2,8 +2,8 @@ import Electricity from "public/images/Electricity.png";
 import Electricity2 from "public/images/Electricity2.png";
 import gamer from "public/images/gamer.png";
 import gamer2 from "public/images/gamer2.png";
-import hub1 from "public/images/hub1.jpg";
-import hub2 from "public/images/hub2.jpg";
+import hub1 from "public/images/hub1.png";
+import hub2 from "public/images/hub2.png";
 import pet from "public/images/pet.png";
 import pet2 from "public/images/pet2.png";
 import rentaxi from "public/images/rentaxi.png";
@@ -190,7 +190,7 @@ export const products = [
     href: "https://learnhub-platform.netlify.app/",
     title: "LearnHub",
     description:
-      "Rentaxi connects riders and drivers in real-time for seamless travel.",
+      "A dynamic online learning platform designed to provide educational experience",
     thumbnail: hub1,
     images: [hub1, hub2],
     stack: ["Reactjs", "Tailwindcss", "DaisyUI", "Nodejs", "Expressjs", "MongoDB"],
