@@ -8,10 +8,10 @@ import { Paragraph } from "./Paragraph";
 
 export const WorkHistory = () => {
   return (
-    <div className="relative bg-gradient-to-b from-blue-50 to-teal-50 py-8">
-      {/* Vertical timeline line with a softer teal */}
-      <div className="border-l-4 border-teal-300 absolute left-4 top-0 h-full"></div>
-      
+    <div className="relative bg-white py-8 px-4">
+      {/* Vertical timeline line using a subtle black */}
+      <div className="absolute left-4 top-0 h-full"></div>
+
       {timeline.map((item, index) => (
         <div
           key={`timeline-${index}`}
@@ -21,20 +21,20 @@ export const WorkHistory = () => {
         >
           {/* Timeline event indicator */}
           <div className="absolute left-0 md:left-auto md:right-0 transform -translate-x-8 md:translate-x-8">
-            <div className="w-6 h-6 bg-teal-400 rounded-full border-4 border-white shadow-md"></div>
+            <div className="w-6 h-6 bg-black rounded-full border-2 border-white shadow-sm"></div>
           </div>
-          
+
           {/* Date text */}
-          <Paragraph className="text-teal-500 font-semibold text-sm md:text-md md:w-32">
+          <Paragraph className="text-black font-semibold text-sm md:text-md md:w-32">
             {item.date}
           </Paragraph>
-          
+
           {/* Event card */}
-          <div className="bg-white/90 shadow-md rounded-xl p-6 w-full max-w-3xl hover:shadow-lg transition-shadow duration-300">
-            <Heading as="h5" className="text-lg md:text-xl font-bold text-teal-600">
+          <div className="bg-white shadow-sm rounded-lg p-6 w-full max-w-3xl hover:shadow-md transition-shadow duration-300 border border-black">
+            <Heading as="h5" className="text-lg md:text-xl font-bold text-black">
               {item.title}
             </Heading>
-            <Paragraph className="text-sm md:text-base font-medium text-gray-700 mt-2">
+            <Paragraph className="text-sm md:text-base font-medium text-black mt-2">
               {item.description}
             </Paragraph>
             <ul className="mt-4 space-y-2">
@@ -54,8 +54,8 @@ export const WorkHistory = () => {
 const Step = ({ children }: { children: React.ReactNode }) => {
   return (
     <li className="flex space-x-3 items-start">
-      <IconCircleCheckFilled className="h-5 w-5 text-teal-500 mt-1" />
-      <Paragraph className="text-sm md:text-base text-gray-600">
+      <IconCircleCheckFilled className="h-5 w-5 text-black mt-1" />
+      <Paragraph className="text-sm md:text-base text-black">
         {children}
       </Paragraph>
     </li>

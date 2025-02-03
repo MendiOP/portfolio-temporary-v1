@@ -12,7 +12,7 @@ export const timeline = [
   },
   {
     title: "Projects",
-    date: "During Academic Period",
+    date: "",
     description: "Practical implementation of programming skills through diverse projects.",
     responsibilities: [
       "Gaming Review Platform: Created a React-based platform to enable real-time reviews with MongoDB integration and responsive UI.",
@@ -23,7 +23,7 @@ export const timeline = [
   },
   {
     title: "Skills",
-    date: "Accumulated Over Academic and Personal Projects",
+    date: "",
     description: "A diverse set of technical and development skills.",
     responsibilities: [
       "Programming Languages: Java (Advanced), C++ (Intermediate), Python (Basic).",
@@ -34,7 +34,7 @@ export const timeline = [
   },
   {
     title: "Certifications",
-    date: "2020",
+    date: "",
     description: "Recognized skills and achievements.",
     responsibilities: [
       "Problem Solving (Intermediate) – Hackerrank Certification.",
