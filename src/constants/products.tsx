@@ -2,11 +2,12 @@ import Electricity from "public/images/Electricity.png";
 import Electricity2 from "public/images/Electricity2.png";
 import gamer from "public/images/gamer.png";
 import gamer2 from "public/images/gamer2.png";
+import hub1 from "public/images/hub1.jpg";
+import hub2 from "public/images/hub2.jpg";
 import pet from "public/images/pet.png";
 import pet2 from "public/images/pet2.png";
 import rentaxi from "public/images/rentaxi.png";
 import rentaxi2 from "public/images/rentaxi2.png";
-
 export const products = [
   {
     href: "https://rentaxi-pain.netlify.app/",
@@ -182,6 +183,83 @@ export const products = [
           learning curve manageable.
         </p>
       </div>
+    ),
+  },
+
+  {
+    href: "https://learnhub-platform.netlify.app/",
+    title: "LearnHub",
+    description:
+      "Rentaxi connects riders and drivers in real-time for seamless travel.",
+    thumbnail: hub1,
+    images: [hub1, hub2],
+    stack: ["Reactjs", "Tailwindcss", "DaisyUI", "Nodejs", "Expressjs", "MongoDB"],
+    slug: "LearnHub",
+    content: (
+      <div>
+  {/* Introduction */}
+  <p>
+    <strong>LearnHub</strong> is a dynamic online learning platform designed to provide 
+    a seamless and engaging educational experience. It offers a wide range of courses 
+    across various domains, enabling users to learn at their own pace while 
+    interacting with a vibrant learning community. Whether you're a student, 
+    professional, or lifelong learner, LearnHub makes quality education accessible 
+    through an intuitive interface and personalized learning paths.
+  </p>
+
+  <p>
+    From a technical perspective, LearnHub leverages modern web technologies to 
+    ensure smooth content delivery and real-time progress tracking. Features such as 
+    interactive quizzes, peer discussions, and certification programs enhance 
+    engagement, making learning more effective and enjoyable.
+  </p>
+
+  {/* Section 1: User Authentication & Role-Based Access */}
+  <h3>1. Secure Authentication & Role-Based Access</h3>
+  <p>
+    <strong>Challenge:</strong> Implementing a robust authentication system was 
+    essential to differentiate access levels between learners, instructors, and 
+    administrators while maintaining data security.
+  </p>
+  <p>
+    <strong>Solution:</strong> I integrated Firebase Authentication with React Router 
+    to manage protected routes, ensuring secure login and seamless access control. 
+    Using role-based permissions, the platform grants different functionalities to 
+    users—for example, instructors can create courses, while learners can only 
+    enroll and participate. Authentication state is managed via React's Context API, 
+    maintaining a smooth user experience across sessions.
+  </p>
+
+  {/* Section 2: Real-time Course Progress Tracking */}
+  <h3>2. Real-time Course Progress Tracking</h3>
+  <p>
+    <strong>Challenge:</strong> Keeping learners updated on their course progress and 
+    ensuring real-time data synchronization was crucial for an effective learning 
+    experience.
+  </p>
+  <p>
+    <strong>Solution:</strong> By leveraging Firebase Firestore’s real-time 
+    capabilities, I implemented a progress tracking system that updates user 
+    milestones dynamically. Each lesson completion triggers an update in the user's 
+    progress dashboard, allowing them to track their learning journey. Optimistic UI 
+    updates ensure immediate feedback, enhancing engagement and motivation.
+  </p>
+
+  {/* Section 3: Data Visualization with Chart.js */}
+  <h3>3. Data Visualization with Chart.js</h3>
+  <p>
+    <strong>Challenge:</strong> Displaying student performance insights and course 
+    analytics in an intuitive manner was necessary for instructors and administrators.
+  </p>
+  <p>
+    <strong>Solution:</strong> I integrated <code>Chart.js</code> with React using 
+    <code>react-chartjs-2</code> to create dynamic dashboards showcasing enrollment 
+    trends, completion rates, and user engagement metrics. These charts update in 
+    real time, providing educators with valuable insights to improve course content 
+    and delivery.
+  </p>
+</div>
+
     ),
   },
   
