@@ -8,7 +8,7 @@ import { WorkHistory } from "@/components/WorkHistory";
 
 export default function Home() {
   const handleDownload = () => {
-    const resumeUrl = "/MEHEDI_HASAN_CV_NEW.pdf";
+    const resumeUrl = "/Mern_Stack_dev_MEHEDI_HASAN.pdf";
     const link = document.createElement("a");
     link.href = resumeUrl;
     link.download = "Resume_Mehedi.pdf";

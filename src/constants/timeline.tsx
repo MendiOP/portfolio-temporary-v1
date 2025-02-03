@@ -1,3 +1,4 @@
+// constants/timeline.js
 export const timeline = [
   {
     title: "Education",
