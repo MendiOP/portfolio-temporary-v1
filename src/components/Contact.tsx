@@ -1,5 +1,7 @@
 "use client";
+import emailjs from 'emailjs-com';
 import { useState } from "react";
+import Swal from 'sweetalert2';
 
 const defaultFormState = {
   name: {
@@ -20,7 +22,6 @@ export const Contact = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    // will write later
     const {
       name: { value: nameValue },
       email: { value: emailValue },
@@ -31,7 +32,25 @@ export const Contact = () => {
 
     setFormData(defaultFormState);
 
-    
+    emailjs.send("portfolio_service_35","template_xk0hsxu",{
+      from_name: nameValue,
+      to_name: emailValue,
+      message: messageValue,
+      }).then((res) => {
+        console.log('Email successfully sent!', res.text);
+        Swal.fire({
+          title: "Good job!",
+          text: "You clicked the button!",
+          icon: "success"
+        });
+      }).catch((err) => {
+        console.error('Something went wrong:', err);
+        Swal.fire({
+          title: "Oops",
+          text: "Something went wrong!",
+          icon: "error"
+        });
+      });
   };
   return (
     <form className="form" onSubmit={handleSubmit}>
