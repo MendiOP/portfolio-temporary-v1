@@ -20,6 +20,7 @@ const defaultFormState = {
 
 export const Contact = () => {
   const [formData, setFormData] = useState(defaultFormState);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (event:any) => {
     event.preventDefault();
@@ -30,6 +31,8 @@ export const Contact = () => {
       message: { value: messageValue },
     } = formData;
 
+    const constructedMessage = `Name: ${nameValue}\nEmail: ${emailValue}\nMessage: ${messageValue}`;
+    setLoading(true);
 
     try {
       const res = await emailjs.send(
@@ -38,22 +41,26 @@ export const Contact = () => {
         {
           from_name: nameValue,
           from_email: emailValue,
-          message: messageValue,
+          message: constructedMessage,
           to_name: "mehedihm2015@gmail.com",
         },
         "cfSIcIfrNtnRQSTkZ"
       );
       console.log("Email successfully sent!", res.text);
 
+      console.log("totalMessage", constructedMessage);
+
       Swal.fire({
         title: "Good job!",
         text: "Email successfully sent!",
         icon: "success",
         confirmButtonText: "OK",
+        confirmButtonColor: "#3085d6",
       });
 
-      // Clear form after success
+      setLoading(false);
       setFormData(defaultFormState);
+
     } catch (error) {
       console.error("Something went wrong:", error);
       Swal.fire({
@@ -61,6 +68,7 @@ export const Contact = () => {
         text: "Something went wrong!",
         icon: "error",
         confirmButtonText: "Try Again",
+        confirmButtonColor: "#3085d6",
       });
     }
   };
@@ -120,11 +128,20 @@ export const Contact = () => {
         />
       </div>
       <button
-        className="w-full px-2 py-2 mt-4 bg-neutral-100 rounded-md font-bold text-neutral-500"
         type="submit"
-      >
-        Submit
-      </button>
+    className="w-full flex items-center justify-center px-2 py-2 mt-4 bg-neutral-100 rounded-md font-bold text-neutral-500"
+    >
+  {loading ? (
+    <>
+      <div className="w-4 h-4 border-2 border-gray-300 border-t-2 border-t-gray-700 rounded-full animate-spin mr-2"></div>
+      Sending...
+    </>
+  ) : (
+    "Send Message"
+  )}
+</button>
+
+
     </form>
   );
 };
