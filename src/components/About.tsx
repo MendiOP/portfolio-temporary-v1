@@ -10,7 +10,15 @@ export default function About() {
     "https://i.ibb.co/cvBFv8r/p3.jpg",
     "https://i.ibb.co/09x3rRc/p2.jpg",
     "https://i.ibb.co/6m43Ryz/p1.jpg",
+    "https://i.ibb.co/KpsLfxJW/IMG20240605133008.jpg",
+    "https://i.ibb.co/jP8fVfbJ/IMG20240605132022.jpg",
+
+
+    "https://i.ibb.co/35BJFgWv/IMG20240602113311.jpg",
+    "https://i.ibb.co/QFQVGYxx/IMG20240605073325.jpg",
   ];
+
+  
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -33,6 +41,7 @@ export default function About() {
             />
           </motion.div>
         ))}
+        
       </div>
 
       {/* About Me Section */}
