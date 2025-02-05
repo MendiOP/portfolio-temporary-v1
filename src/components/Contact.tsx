@@ -21,8 +21,8 @@ const defaultFormState = {
 export const Contact = () => {
   const [formData, setFormData] = useState(defaultFormState);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async (event:any) => {
+    event.preventDefault();
 
     const {
       name: { value: nameValue },
