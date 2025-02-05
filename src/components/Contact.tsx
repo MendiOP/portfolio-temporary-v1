@@ -1,7 +1,7 @@
 "use client";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 import { useState } from "react";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 const defaultFormState = {
   name: {
@@ -17,41 +17,54 @@ const defaultFormState = {
     error: "",
   },
 };
+
 export const Contact = () => {
   const [formData, setFormData] = useState(defaultFormState);
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     const {
       name: { value: nameValue },
       email: { value: emailValue },
       message: { value: messageValue },
     } = formData;
 
-    console.log(nameValue, emailValue, messageValue);
 
-    setFormData(defaultFormState);
+    try {
+      const res = await emailjs.send(
+        "portfolio_service_35",
+        "template_xk0hsxu",
+        {
+          from_name: nameValue,
+          from_email: emailValue,
+          message: messageValue,
+          to_name: "mehedihm2015@gmail.com",
+        },
+        "cfSIcIfrNtnRQSTkZ"
+      );
+      console.log("Email successfully sent!", res.text);
 
-    emailjs.send("portfolio_service_35","template_xk0hsxu",{
-      from_name: nameValue,
-      to_name: "mehedihm2015@gmail.com",
-      message: messageValue,
-      }).then((res) => {
-        console.log('Email successfully sent!', res.text);
-        Swal.fire({
-          title: "Good job!",
-          text: "You clicked the button!",
-          icon: "success"
-        });
-      }).catch((err) => {
-        console.error('Something went wrong:', err);
-        Swal.fire({
-          title: "Oops",
-          text: "Something went wrong!",
-          icon: "error"
-        });
+      Swal.fire({
+        title: "Good job!",
+        text: "Email successfully sent!",
+        icon: "success",
+        confirmButtonText: "OK",
       });
+
+      // Clear form after success
+      setFormData(defaultFormState);
+    } catch (error) {
+      console.error("Something went wrong:", error);
+      Swal.fire({
+        title: "Oops!",
+        text: "Something went wrong!",
+        icon: "error",
+        confirmButtonText: "Try Again",
+      });
+    }
   };
+
   return (
     <form className="form" onSubmit={handleSubmit}>
       <div className="flex flex-col md:flex-row justify-between gap-5">
@@ -110,7 +123,7 @@ export const Contact = () => {
         className="w-full px-2 py-2 mt-4 bg-neutral-100 rounded-md font-bold text-neutral-500"
         type="submit"
       >
-        Submit{" "}
+        Submit
       </button>
     </form>
   );
