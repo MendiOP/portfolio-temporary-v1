@@ -34,7 +34,7 @@ export const Contact = () => {
 
     emailjs.send("portfolio_service_35","template_xk0hsxu",{
       from_name: nameValue,
-      to_name: emailValue,
+      to_name: "mehedihm2015@gmail.com",
       message: messageValue,
       }).then((res) => {
         console.log('Email successfully sent!', res.text);
