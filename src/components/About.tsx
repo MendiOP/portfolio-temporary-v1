@@ -48,7 +48,7 @@ export default function About() {
 
         {/* Educational Background */}
         <Paragraph className="mt-4">
-          I followed my passion to the prestigious <span className="font-semibold text-lg">Bangladesh University of Engineering and Technology (BUET)</span>, where I earned my degree in Computer Science and Engineering. My time at BUET wasn’t just about classes—it was where I really challenged myself, learned to think critically, and discovered just how much I love solving problems.
+          I followed my passion to the prestigious <span className="font-semibold text-lg">Bangladesh University of Engineering and Technology (BUET)</span>, where I studied Computer Science and Engineering. My time at BUET wasn’t just about classes—it was where I really challenged myself, learned to think critically, and discovered just how much I love solving problems.
         </Paragraph>
 
         {/* Professional Aspirations */}
