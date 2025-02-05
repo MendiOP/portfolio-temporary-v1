@@ -9,7 +9,7 @@ import { getAllBlogs } from "../../../lib/getAllBlogs";
 export const metadata: Metadata = {
   title: "Blogs | Mehedi Hasan",
   description:
-    "Mehedi Doe is a developer, gamer and traveler. He is a digital nomad and travels around the world while working remotely.",
+    "Mehedi Hasan is a developer, gamer and traveler. He is a digital nomad and travels around the world while working remotely.",
 };
 
 export default async function Blog() {

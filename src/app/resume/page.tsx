@@ -23,7 +23,7 @@ export default function Home() {
           <span className="text-4xl">💼</span>
           <Heading className="font-black">Work History</Heading>
           <Paragraph className="max-w-xl mt-4">
-            I&apos;m a Frontend developer that loves{" "}
+            I&apos;m a <span className="font-bold text-lg text-emerald-500">Full Stack developer</span> that loves{" "}
             <Highlight>building products</Highlight> and web apps that can
             impact millions of lives
           </Paragraph>
